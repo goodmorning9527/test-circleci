@@ -1,3 +1,4 @@
+
 version: 2
 jobs:
   job1:
@@ -16,13 +17,14 @@ jobs:
 
 workflows:
   version: 2
-  jobs:
-    - job1
-    - job2
-    - job3:
-        requires:
-          - job1
-          - job2
-    - job4:
-        requires:
-          - job3
+  build-test-and-deploy:
+    jobs:
+      - job1
+      - job2
+      - job3:
+          requires:
+            - job1
+            - job2
+      - job4:
+          requires:
+            - job3
