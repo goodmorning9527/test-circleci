@@ -3,17 +3,16 @@ version: 2
 jobs:
   job1:
     steps:
-      - checkout
-      - run: make build dependencies
+      - run: echo AA
   job2:
     steps:
-      - run: make build artifacts
+      - run: echo AA
   job3:
     steps:
-      - run: make test
+      - run: echo AA
   job4:
     steps:
-      - run: make deploy
+      - run: echo AA
 
 workflows:
   version: 2
