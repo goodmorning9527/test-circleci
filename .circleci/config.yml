@@ -2,15 +2,23 @@
 version: 2
 jobs:
   job1:
+    docker:
+      - image: alpine:latest
     steps:
       - run: echo AA
   job2:
+    docker:
+      - image: alpine:latest
     steps:
       - run: echo AA
   job3:
+    docker:
+      - image: alpine:latest
     steps:
       - run: echo AA
   job4:
+    docker:
+      - image: alpine:latest
     steps:
       - run: echo AA
 
