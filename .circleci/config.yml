@@ -21,6 +21,24 @@ jobs:
       - image: alpine:latest
     steps:
       - run: echo AA
+  job5:
+    docker:
+      - image: alpine:latest
+    steps:
+      - run: echo AA
+  job6:
+    docker:
+      - image: alpine:latest
+    steps:
+      - run: echo AA
+  job7:
+    docker:
+      - image: alpine:latest
+    steps:
+      - run: echo AA
+
+
+
 
 workflows:
   version: 2
@@ -35,3 +53,13 @@ workflows:
       - job4:
           requires:
             - job3
+      - job5:
+          requires:
+            - job3
+      - job6:
+          requires:
+            - job5
+      - job7:
+          requires:
+            - job6
+            - job4
