@@ -17,3 +17,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo AAA
+  asdasdasd:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo AAA
+  BBBBBBBBBB:
+    needs: 
+      - test
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo AAA
