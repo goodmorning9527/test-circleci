@@ -7,6 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo AAA
+  CCCC:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo AAA
   build:
     needs: setup
     runs-on: ubuntu-latest
@@ -26,6 +31,7 @@ jobs:
     needs: 
       - test
       - asdasdasd
+      - CCCC
     runs-on: ubuntu-latest
     steps:
       - run: echo AAA
